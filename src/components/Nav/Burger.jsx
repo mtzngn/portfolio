@@ -13,18 +13,12 @@ display: flex;
 justify-content: space-around;
 flex-flow: column nowrap;
 z-index:20;
-display:none;
 
-@media (max-width: 768px) {
-    display: flex;
-    justify-content: space-around;
-    flex-flow: column nowrap;
-}
 
 div {
     width: 2rem;
     height: 0.25rem;
-    background-color: ${({ open }) => open ? '#ccc' : '#333'};
+    background-color: ${({ open }) => open ? '#fff' : '#e5e5e5'};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;
