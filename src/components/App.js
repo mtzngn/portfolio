@@ -2,6 +2,11 @@ import React from "react";
 import Navbar from "./Nav/Navbar";
 import styled from "styled-components";
 import {BrowserRouter as Router, Route} from "react-router-dom";
+import Home from "../pages/Home"
+import Projects from "../pages/Projects"
+import About from "../pages/About"
+import Cv from "../pages/Cv"
+import Contact from "../pages/Contact"
  
 const StyledApp = styled.div`
 background-color: #000;
@@ -15,19 +20,19 @@ const App = () => {
       <Navbar />
 
       <Route exact path="/">
-        <h1>HOMEE</h1>
+        <Home />
       </Route>
       <Route path="/projects">
-        <h1>Projects</h1>
+        <Projects />
       </Route>
       <Route path="/about">
-        <h1>About</h1>
+        <About />
       </Route>
       <Route path="/cv">
-       <h1>CV</h1>
+         <Cv />
       </Route>
       <Route path="/contact">
-        <h1>Contact</h1>
+        <Contact />
       </Route>
     </StyledApp>
     </Router>

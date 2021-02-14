@@ -5,7 +5,7 @@ import Logo from "./Logo"
 
 const Nav = styled.nav`
 width:100%;
-height:55px;
+height:8vh;
 padding: 0 20px;
 display: flex;
 justify-content: space-between;
