@@ -1,11 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import styled, { css } from 'styled-components'
+import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
+ 
+import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 
 
 const App = () => {
   return (
     <div className="App">
+
       <h1>hello world</h1>
     <Button>Click mee</Button>
     <Button primary>Click mee</Button>
