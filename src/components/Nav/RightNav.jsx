@@ -7,18 +7,18 @@ const Ul = styled.ul `
     list-style: none;
     display: flex;
     align-items: center;
-    z-index:19;
-
+    z-index: 20;
     flex-flow: column nowrap;
-    background-color: #14213d;
+    background-color: #0A111F;
     position: fixed;
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
     top: 0;
     right: 0;
     height: 100vh;
     width:300px;
-    padding-top: 5.5rem; 
+    padding-top: 8vh; 
     transition: transform 0.3s ease-in-out;
+    
 
     li {
         padding: 20px 10px;

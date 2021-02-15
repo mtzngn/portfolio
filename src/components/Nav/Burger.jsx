@@ -12,7 +12,7 @@ right: 20px;
 display: flex;
 justify-content: space-around;
 flex-flow: column nowrap;
-z-index:20;
+z-index:99;
 
 
 div {

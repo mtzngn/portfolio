@@ -15,6 +15,7 @@ import whackAMole from '../assets/whackAMole.png';
 const StyledCards = styled.div`
 width:100%;
 height: 100%;
+background-color: #14213D;
 h2 {
     color: #fff;
     margin-top: 20px;

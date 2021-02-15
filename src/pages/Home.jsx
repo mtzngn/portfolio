@@ -19,9 +19,19 @@ color: white;
 div {
     height:20%;
     h1{
+        font-size:1.5em;
         text-align:center;
         margin-top:20px;
         margin-left:10px;
+        @media(min-width:765px){
+            font-size:2em;
+        }
+        @media(min-width:1024px){
+            font-size:2.4em;
+        }
+        @media(min-width:1440px){
+            font-size:3em;
+        }
     }
 }
 `
