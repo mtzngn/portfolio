@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from "styled-components";
 import SocialLinks from "../components/SocialLinks"
+import Typist from 'react-typist';
+
 
 
 
@@ -22,6 +24,10 @@ div {
         margin-left:10px;
     }
 }
+
+}
+
+
 `
 
 
@@ -30,8 +36,18 @@ const Home = () => {
     return (
         <StyledWelcome>
             <div>
-                <h1>Hi there, i'm Taha. </h1>
-                <h1>Junior Web Developer</h1>
+                <Typist avgTypingSpeed={5} cursor={{ show: false}}>
+                    <h1>Hi there, i'm Taha. </h1>
+                    <Typist.Delay ms={500} />
+                    <h1>Junior Full-Stack Web Developer</h1>
+                    <Typist.Backspace count={31} delay={600} />
+                    <h1>Engineer</h1>
+                    <Typist.Backspace count={8} delay={600} />
+                    <h1>Traveller</h1>
+                    <Typist.Backspace count={9} delay={600} />
+                    <h1>{"{Coder}"}</h1>
+                </Typist>
+
             </div>
             <SocialLinks />
         </StyledWelcome>
