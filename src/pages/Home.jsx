@@ -23,7 +23,8 @@ div {
         margin-top:20px;
         margin-left:10px;
     }
-}`
+}
+`
 
 const Home = () => {
     return (
