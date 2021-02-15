@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.js": "/static/js/main.eb6a585d.chunk.js",
-    "main.js.map": "/static/js/main.eb6a585d.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.2fd7dc15.js",
-    "runtime-main.js.map": "/static/js/runtime-main.2fd7dc15.js.map",
-    "static/js/2.8a9beff3.chunk.js": "/static/js/2.8a9beff3.chunk.js",
-    "static/js/2.8a9beff3.chunk.js.map": "/static/js/2.8a9beff3.chunk.js.map",
-    "index.html": "/index.html",
-    "static/js/2.8a9beff3.chunk.js.LICENSE.txt": "/static/js/2.8a9beff3.chunk.js.LICENSE.txt",
-    "static/media/calculator.52aba8e9.png": "/static/media/calculator.52aba8e9.png",
-    "static/media/constellation.b4100f4e.png": "/static/media/constellation.b4100f4e.png",
-    "static/media/diceGame.d5ddb35e.png": "/static/media/diceGame.d5ddb35e.png",
-    "static/media/drumKit.b95aed93.png": "/static/media/drumKit.b95aed93.png",
-    "static/media/keyCodeProject.b7f71a54.png": "/static/media/keyCodeProject.b7f71a54.png",
-    "static/media/pokemon.4f484d5e.png": "/static/media/pokemon.4f484d5e.png",
-    "static/media/spaceInvaders.e3a3119f.png": "/static/media/spaceInvaders.e3a3119f.png",
-    "static/media/twitterClone.b96b478f.png": "/static/media/twitterClone.b96b478f.png",
-    "static/media/whackAMole.97f2586f.png": "/static/media/whackAMole.97f2586f.png"
+    "main.js": "/portfolio/static/js/main.eb6a585d.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.eb6a585d.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.8fed2963.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.8fed2963.js.map",
+    "static/js/2.b5e359e3.chunk.js": "/portfolio/static/js/2.b5e359e3.chunk.js",
+    "static/js/2.b5e359e3.chunk.js.map": "/portfolio/static/js/2.b5e359e3.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "static/js/2.b5e359e3.chunk.js.LICENSE.txt": "/portfolio/static/js/2.b5e359e3.chunk.js.LICENSE.txt",
+    "static/media/calculator.52aba8e9.png": "/portfolio/static/media/calculator.52aba8e9.png",
+    "static/media/constellation.b4100f4e.png": "/portfolio/static/media/constellation.b4100f4e.png",
+    "static/media/diceGame.d5ddb35e.png": "/portfolio/static/media/diceGame.d5ddb35e.png",
+    "static/media/drumKit.b95aed93.png": "/portfolio/static/media/drumKit.b95aed93.png",
+    "static/media/keyCodeProject.b7f71a54.png": "/portfolio/static/media/keyCodeProject.b7f71a54.png",
+    "static/media/pokemon.4f484d5e.png": "/portfolio/static/media/pokemon.4f484d5e.png",
+    "static/media/spaceInvaders.e3a3119f.png": "/portfolio/static/media/spaceInvaders.e3a3119f.png",
+    "static/media/twitterClone.b96b478f.png": "/portfolio/static/media/twitterClone.b96b478f.png",
+    "static/media/whackAMole.97f2586f.png": "/portfolio/static/media/whackAMole.97f2586f.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.2fd7dc15.js",
-    "static/js/2.8a9beff3.chunk.js",
+    "static/js/runtime-main.8fed2963.js",
+    "static/js/2.b5e359e3.chunk.js",
     "static/js/main.eb6a585d.chunk.js"
   ]
 }
