@@ -20,7 +20,7 @@ const App = () => {
     <StyledApp className="App">
       <Navbar />
 
-      <Route exact path="/">
+      <Route exact path="/portfolio">
         <Home />
       </Route>
       <Route path="/projects">
