@@ -24,13 +24,7 @@ div {
         margin-left:10px;
     }
 }
-
-}
-
-
 `
-
-
 
 const Home = () => {
     return (

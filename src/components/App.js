@@ -11,7 +11,7 @@ import Contact from "../pages/Contact"
  
 const StyledApp = styled.div`
 background-color: #000;
-height: 100vh;
+height: fit-content;
 `
 
 const App = () => {

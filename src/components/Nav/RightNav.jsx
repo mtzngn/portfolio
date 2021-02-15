@@ -7,6 +7,7 @@ const Ul = styled.ul `
     list-style: none;
     display: flex;
     align-items: center;
+    z-index:19;
 
     flex-flow: column nowrap;
     background-color: #14213d;

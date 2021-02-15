@@ -3,7 +3,7 @@ import React from 'react'
 const Cv = () => {
     return (
         <div>
-            <h1 style={{color: "white"}}>this is an CV Page</h1>            
+            <h1 style={{color: "white"}}>CV IS COMING SOON!</h1>            
         </div>
     )
 }
