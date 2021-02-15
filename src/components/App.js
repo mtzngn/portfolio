@@ -7,6 +7,7 @@ import Projects from "../pages/Projects"
 import About from "../pages/About"
 import Cv from "../pages/Cv"
 import Contact from "../pages/Contact"
+
  
 const StyledApp = styled.div`
 background-color: #000;
