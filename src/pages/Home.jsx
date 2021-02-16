@@ -7,6 +7,14 @@ import Typist from 'react-typist';
 
 
 const StyledWelcome = styled.div`
+canvas {
+    width:100%;
+    height: 92vh;
+    position: absolute;
+    z-index: -1;
+}
+position: relative;
+
 width:100%;
 height: 92vh;
 background-color: #14213D;
@@ -35,7 +43,6 @@ div {
     }
 }
 `
-
 const Home = () => {
     return (
         <StyledWelcome>
@@ -51,9 +58,9 @@ const Home = () => {
                     <Typist.Backspace count={9} delay={600} />
                     <h1>{"{Coder}"}</h1>
                 </Typist>
-
             </div>
             <SocialLinks />
+            <canvas></canvas>
         </StyledWelcome>
     )
 }
