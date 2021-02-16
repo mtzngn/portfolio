@@ -42,6 +42,16 @@ ul {
     transform: translateY(-4px);
 
 }
+
+        @media(min-width:765px){
+            margin-top: 15px;
+        }
+        @media(min-width:1024px){
+            margin-top: 25px;
+        }
+        @media(min-width:1440px){
+            margin-top: 30px;
+        }
 `
 const SocialLinks = () => {
     return (
