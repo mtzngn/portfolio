@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import React from 'react'
 import styled from "styled-components";
 import SocialLinks from "../components/SocialLinks"
 import Typist from 'react-typist';
@@ -28,6 +28,12 @@ color: white;
 div {
     height:20%;
     h1{
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
         font-size:1.5em;
         text-align:center;
         margin-top:20px;
@@ -45,11 +51,7 @@ div {
 }
 `
 const Home = () => {
-    const inputRef = useRef(null);
-    useEffect(() => {
-       const cHeight = inputRef.current.offsetHeight;
-       console.log('Input height', cHeight);   
-    }, [inputRef]);
+
     return (
         <StyledWelcome>
             <div>
@@ -66,8 +68,8 @@ const Home = () => {
                 </Typist>
             </div>
             <SocialLinks />
-            <div ref={inputRef} className="canvasWrapper">
-                <Canvas inputRef={inputRef}/>
+            <div className="canvasWrapper">
+                <Canvas />
             </div>
         </StyledWelcome>
     )

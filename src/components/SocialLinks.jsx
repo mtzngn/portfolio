@@ -14,8 +14,6 @@ ul {
         margin-left:20px;
     }
     display: flex;
-
-
 }
 .circle {
     width:75px;
