@@ -1,12 +1,17 @@
 import React, { useEffect, useRef } from "react";
 
-let x = 0;
-export default function Canvas(){
+export default function Canvas({ inputRef }){
 
     const canvasRef = useRef(null);
     let backgroundColor =  "rgba(2, 48, 71)";
     let circleArray = [];
     let lineArray = [];
+    let mouse = {
+        x: undefined,
+        y: undefined,
+    }
+    let minDist;
+
 
 
     function Circle(x, y, dx, dy, radius, color) {
@@ -33,23 +38,22 @@ export default function Canvas(){
             }
             this.x += this.dx;
             this.y += this.dy;
-            // const distMouse = Math.hypot(mouse.x - this.x, mouse.y - this.y)
-            // minDist = 100;
-            // var moveAway  = minDist  - distMouse
-            // //dont let starts to leave the screen
-            // if (mouse.y + minDist < innerHeight && mouse.y - minDist > 0 && mouse.x + minDist < innerWidth && mouse.x - minDist > 0) {
-            //     if (distMouse < minDist) {
-            //         if ((mouse.x - this.x) < 0) {
-            //             this.x += moveAway
-            //         } else {this.x -= moveAway}
-            //         if (mouse.y - this.y < 0) {
-            //             this.y += moveAway
-            //         } else {this.y -= moveAway}
-            //     }
-            // }
+            const distMouse = Math.hypot(mouse.x - this.x, mouse.y - this.y)
+            minDist = 100;
+            var moveAway  = minDist  - distMouse
+            //dont let starts to leave the screen
+            if (mouse.y + minDist < 1000 && mouse.y - minDist > 0 && mouse.x + minDist < 1000 && mouse.x - minDist > 0) {
+                if (distMouse < minDist) {
+                    if ((mouse.x - this.x) < 0) {
+                        this.x += moveAway
+                    } else {this.x -= moveAway}
+                    if (mouse.y - this.y < 0) {
+                        this.y += moveAway
+                    } else {this.y -= moveAway}
+                }
+            }
             this.draw(ctx);
         }
-        
     }
 
     function Line(x1,y1, x2, y2, a){
@@ -70,14 +74,21 @@ export default function Canvas(){
             this.draw(ctx)
         }
     }
-    
+    // console.log(inputRef.current.clientHeight)
+    console.log(inputRef)
 
 
 
     useEffect(()=>{
+        let canvasHeight = inputRef.current.clientHeight
+        let canvasWidth = inputRef.current.clientWidth
+
         document.addEventListener("click", (e)=>{
-            console.log(e)
             circleArray.push(new Circle(e.pageX, e.pageY, (Math.random() - 0.5), (Math.random() - 0.5), (Math.random() + 1.1) * 3, "white"))
+        })
+        document.addEventListener("mousemove", (e)=>{
+            mouse.x = e.x;
+            mouse.y = e.y;
         })
         circleArray = [];
         for(let i = 0; i < 100; i++){
@@ -90,8 +101,6 @@ export default function Canvas(){
             circleArray.push(new Circle(x, y, dx, dy, radius, color))
         }
         
-    
-
         const render = () => {
             const canvas = canvasRef.current;
             const ctx = canvas.getContext("2d");
@@ -108,7 +117,6 @@ export default function Canvas(){
                     if (index != index2 ) {
                         var dist = Math.hypot(circle.x - circle2.x, circle.y - circle2.y)
                         let a;
-                        //make closer stars to have higher opacity
                         if (dist < 140) {
                             if (dist < 90) {
                                 a = (5 / dist) 
@@ -127,5 +135,7 @@ export default function Canvas(){
         };
         render();
     }, []);
-    return <canvas id="canvas" ref={canvasRef} height="800px" width="1000px" />
+
+
+    return <canvas id="canvas" ref={canvasRef} height="1000px" width="2000px" />
 }

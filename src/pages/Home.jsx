@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import styled from "styled-components";
 import SocialLinks from "../components/SocialLinks"
 import Typist from 'react-typist';
-import Canvas from "../components/Canvas"
+import Canvas from "../components/Canvas/Canvas"
 
 
 
@@ -45,6 +45,11 @@ div {
 }
 `
 const Home = () => {
+    const inputRef = useRef(null);
+    useEffect(() => {
+       const cHeight = inputRef.current.offsetHeight;
+       console.log('Input height', cHeight);   
+    }, [inputRef]);
     return (
         <StyledWelcome>
             <div>
@@ -61,8 +66,8 @@ const Home = () => {
                 </Typist>
             </div>
             <SocialLinks />
-            <div className="canvasWrapper">
-                <Canvas/>
+            <div ref={inputRef} className="canvasWrapper">
+                <Canvas inputRef={inputRef}/>
             </div>
         </StyledWelcome>
     )
