@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
 export default function Canvas({ inputRef }){
-
     const canvasRef = useRef(null);
     let backgroundColor =  "rgba(2, 48, 71)";
     let circleArray = [];
@@ -11,6 +10,8 @@ export default function Canvas({ inputRef }){
         y: undefined,
     }
     let minDist;
+    let canvasWidth = window.innerWidth;
+    let canvasHeight = window.innerHeight;
 
 
 
@@ -30,19 +31,19 @@ export default function Canvas({ inputRef }){
         }
 
         this.update = (ctx) => {
-            if (this.x > 1000 - this.radius || this.x - this.radius < 0) {
+            if (this.x > window.innerWidth - this.radius || this.x - this.radius < 0) {
                 this.dx = -dx;
             }
-            if (this.y > 1000 - this.radius || this.y - this.radius < 0) {
+            if (this.y > window.innerHeight - this.radius || this.y - this.radius < 0) {
                 this.dy = -dy;
             }
             this.x += this.dx;
             this.y += this.dy;
             const distMouse = Math.hypot(mouse.x - this.x, mouse.y - this.y)
             minDist = 100;
-            var moveAway  = minDist  - distMouse
+            let moveAway  = minDist  - distMouse
             //dont let starts to leave the screen
-            if (mouse.y + minDist < 1000 && mouse.y - minDist > 0 && mouse.x + minDist < 1000 && mouse.x - minDist > 0) {
+            if (mouse.y + minDist < window.innerHeight && mouse.y - minDist > 0 && mouse.x + minDist < window.innerWidth && mouse.x - minDist > 0) {
                 if (distMouse < minDist) {
                     if ((mouse.x - this.x) < 0) {
                         this.x += moveAway
@@ -80,8 +81,6 @@ export default function Canvas({ inputRef }){
 
 
     useEffect(()=>{
-        let canvasHeight = inputRef.current.clientHeight
-        let canvasWidth = inputRef.current.clientWidth
 
         document.addEventListener("click", (e)=>{
             circleArray.push(new Circle(e.pageX, e.pageY, (Math.random() - 0.5), (Math.random() - 0.5), (Math.random() + 1.1) * 3, "white"))
@@ -90,11 +89,18 @@ export default function Canvas({ inputRef }){
             mouse.x = e.x;
             mouse.y = e.y;
         })
+
+        // document.addEventListener("resize", function() {
+        //     let canvasWidth = window.innerWidth;
+        //     let canvasHeight = window.innerHeight;
+        //     // init();
+        // })
+
         circleArray = [];
-        for(let i = 0; i < 100; i++){
+        for(let i = 0; i < canvasWidth * 0.2 ; i++){
             let radius = (Math.random() + 0.2) * 5;
-            let x = Math.random() * 1000;
-            let y = Math.random() * 1000;
+            let x = Math.random() * canvasWidth;
+            let y = Math.random() * canvasHeight;
             let dx = (Math.random() - 0.5) ;  
             let dy = (Math.random() - 0.5) ;
             let color = "white"
@@ -105,7 +111,7 @@ export default function Canvas({ inputRef }){
             const canvas = canvasRef.current;
             const ctx = canvas.getContext("2d");
             ctx.fillStyle = backgroundColor;
-            ctx.fillRect(0,0, canvas.width, canvas.height)
+            ctx.fillRect(0,0, canvasWidth, canvasHeight)
 
             circleArray.forEach((circle)=>{
                 circle.update(ctx)
@@ -137,5 +143,5 @@ export default function Canvas({ inputRef }){
     }, []);
 
 
-    return <canvas id="canvas" ref={canvasRef} height="1000px" width="2000px" />
+    return <canvas id="canvas" ref={canvasRef} height={canvasHeight} width={canvasWidth} />
 }
