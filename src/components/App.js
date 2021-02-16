@@ -10,7 +10,7 @@ import Contact from "../pages/Contact"
 
  
 const StyledApp = styled.div`
-background-color: #000;
+background-color: rgba(0, 0, 0, 0.1);
 height: fit-content;
 `
 

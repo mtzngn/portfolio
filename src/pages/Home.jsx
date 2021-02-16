@@ -2,22 +2,23 @@ import React from 'react'
 import styled from "styled-components";
 import SocialLinks from "../components/SocialLinks"
 import Typist from 'react-typist';
-
+import Canvas from "../components/Canvas"
 
 
 
 const StyledWelcome = styled.div`
-canvas {
+.canvasWrapper {
     width:100%;
     height: 92vh;
     position: absolute;
     z-index: -1;
+    background: transparent;
 }
 position: relative;
 
 width:100%;
 height: 92vh;
-background-color: #14213D;
+background-color: rgba(20, 33, 61, 0.1);
 display:flex;
 flex-direction: column;
 justify-content: center;
@@ -60,7 +61,9 @@ const Home = () => {
                 </Typist>
             </div>
             <SocialLinks />
-            <canvas></canvas>
+            <div className="canvasWrapper">
+                <Canvas/>
+            </div>
         </StyledWelcome>
     )
 }
