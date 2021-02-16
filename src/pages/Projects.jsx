@@ -104,55 +104,55 @@ const Projects = () => {
     return (
         <StyledCards>
             <div className="cardWrapper">
-                <a href="https://simplecalculator92.netlify.app/">
+                <a target="_blank" href="https://simplecalculator92.netlify.app/">
                 <Card cardClass={"card1"}/>
                 <h2>Calculator with React.js</h2>
                 </a>
             </div>
             <div className="cardWrapper">
-            <a href="https://mtzngn.github.io/canvasConstellation/">
+            <a target="_blank" href="https://mtzngn.github.io/canvasConstellation/">
                 <Card cardClass={"card2"}/>
                 <h2>Constellations</h2>
             </a>
             </div>
             <div className="cardWrapper">
-            <a href="https://mtzngn.github.io/spaceInvaders/">
+            <a target="_blank" href="https://mtzngn.github.io/spaceInvaders/">
                 <Card cardClass={"card3"}/>
                 <h2>Space Invaders </h2>
             </a>
             </div>
             <div className="cardWrapper">
-            <a href="https://mtzngn.github.io/twitter-clone">
+            <a target="_blank" href="https://mtzngn.github.io/twitter-clone">
                 <Card cardClass={"card4"}/>
                 <h2>Twitter Clone</h2>
             </a>
             </div>
             <div className="cardWrapper">
-            <a href="https://mtzngn.github.io/topTrumpGame/">
+            <a target="_blank" href="https://mtzngn.github.io/topTrumpGame/">
                 <Card cardClass={"card5"}/>
                 <h2>Top Trump</h2>
             </a>
             </div>
             <div className="cardWrapper">
-            <a href="https://mtzngn.github.io/diceGame2/">
+            <a target="_blank" href="https://mtzngn.github.io/diceGame2/">
                 <Card cardClass={"card6"}/>
                 <h2>Dice Game</h2>
             </a>
             </div>
             <div className="cardWrapper">
-            <a href="https://mtzngn.github.io/whackAMoleGame/">
+            <a target="_blank" href="https://mtzngn.github.io/whackAMoleGame/">
                 <Card cardClass={"card7"}/>
                 <h2>Whack A Mole</h2>
             </a>
             </div>
             <div className="cardWrapper">
-            <a href="https://mtzngn.github.io/drumKit/">
+            <a target="_blank" href="https://mtzngn.github.io/drumKit/">
                 <Card cardClass={"card8"}/>
                 <h2>Drum Kit</h2>
             </a>
             </div>
             <div className="cardWrapper">
-            <a href="https://mtzngn.github.io/keyCodeProject/">
+            <a target="_blank" href="https://mtzngn.github.io/keyCodeProject/">
                 <Card cardClass={"card9"}/>
                 <h2>Key Code</h2>
             </a>
