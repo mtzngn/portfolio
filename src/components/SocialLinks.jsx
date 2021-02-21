@@ -56,10 +56,10 @@ const SocialLinks = () => {
         <StyledSocialLinks>
             <ul>
                 <li>
-                    <a  target="_blank" href="https://www.github.com/mtzngn"><div className=" circle circleG"></div></a>
+                    <a  target="_blank" href="https://www.github.com/mtzngn" rel="noreferrer"><div className=" circle circleG"></div></a>
                 </li>
                 <li>
-                    <a  target="_blank" href="https://www.linkedin.com/in/taha-zengin/"><div className="circle circleL"></div></a>
+                    <a  target="_blank" href="https://www.linkedin.com/in/taha-zengin/" rel="noreferrer"><div className="circle circleL"></div></a>
                 </li>
             </ul>
         </StyledSocialLinks>

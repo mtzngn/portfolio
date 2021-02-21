@@ -7,11 +7,18 @@ export default function Canvas(){
     let backgroundColor =  "rgb(20,33,61)";
     let circleArray = [];
     let lineArray = [];
-    let canvasHeight = window.innerHeight * 0.92;
-    let canvasWidth = window.innerWidth;
+
 
     useEffect(()=>{
+        let canvasHeight = canvasRef.current.clientHeight
+        let canvasWidth = canvasRef.current.clientWidth
 
+            document.addEventListener("resize", function() {
+                canvasHeight = canvasRef.current.clientHeight
+                canvasWidth = canvasRef.current.clientWidth            
+                console.log(canvasHeight)
+                console.log(canvasWidth)
+            });
         document.addEventListener("click", (e)=>{
             circleArray.push(new Circle(e.pageX, e.pageY, (Math.random() - 0.5), (Math.random() - 0.5), (Math.random() + 1.1) * 3, "white"))
         })
@@ -62,5 +69,7 @@ export default function Canvas(){
         render();
     }, []);
 
-    return <canvas id="canvas" ref={canvasRef} height={canvasHeight} width={canvasWidth} />
+    return <canvas id="canvas" ref={canvasRef} 
+    
+    width= {window.innerWidth} height = {window.innerHeight * 0.92} />
 }
