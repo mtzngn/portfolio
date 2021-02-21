@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.964b0792.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.964b0792.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.059eb44e.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.059eb44e.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.8fed2963.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.8fed2963.js.map",
-    "static/js/2.b5e359e3.chunk.js": "/portfolio/static/js/2.b5e359e3.chunk.js",
-    "static/js/2.b5e359e3.chunk.js.map": "/portfolio/static/js/2.b5e359e3.chunk.js.map",
+    "static/js/2.e03f3137.chunk.js": "/portfolio/static/js/2.e03f3137.chunk.js",
+    "static/js/2.e03f3137.chunk.js.map": "/portfolio/static/js/2.e03f3137.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "static/js/2.b5e359e3.chunk.js.LICENSE.txt": "/portfolio/static/js/2.b5e359e3.chunk.js.LICENSE.txt",
+    "static/js/2.e03f3137.chunk.js.LICENSE.txt": "/portfolio/static/js/2.e03f3137.chunk.js.LICENSE.txt",
     "static/media/calculator.52aba8e9.png": "/portfolio/static/media/calculator.52aba8e9.png",
     "static/media/constellation.b4100f4e.png": "/portfolio/static/media/constellation.b4100f4e.png",
     "static/media/diceGame.d5ddb35e.png": "/portfolio/static/media/diceGame.d5ddb35e.png",
@@ -20,7 +20,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.8fed2963.js",
-    "static/js/2.b5e359e3.chunk.js",
-    "static/js/main.964b0792.chunk.js"
+    "static/js/2.e03f3137.chunk.js",
+    "static/js/main.059eb44e.chunk.js"
   ]
 }
