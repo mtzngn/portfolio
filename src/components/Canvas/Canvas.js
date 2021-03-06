@@ -16,8 +16,6 @@ export default function Canvas(){
             document.addEventListener("resize", function() {
                 canvasHeight = canvasRef.current.clientHeight
                 canvasWidth = canvasRef.current.clientWidth            
-                console.log(canvasHeight)
-                console.log(canvasWidth)
             });
         document.addEventListener("click", (e)=>{
             circleArray.push(new Circle(e.pageX, e.pageY, (Math.random() - 0.5), (Math.random() - 0.5), (Math.random() + 1.1) * 3, "white"))
