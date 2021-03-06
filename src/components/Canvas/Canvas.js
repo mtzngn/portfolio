@@ -10,16 +10,21 @@ export default function Canvas(){
 
 
     useEffect(()=>{
+        const ctx = canvasRef.current.getContext("2d");
         let canvasHeight = canvasRef.current.clientHeight
         let canvasWidth = canvasRef.current.clientWidth
 
-            document.addEventListener("resize", function() {
-                canvasHeight = canvasRef.current.clientHeight
-                canvasWidth = canvasRef.current.clientWidth            
-            });
         document.addEventListener("click", (e)=>{
             circleArray.push(new Circle(e.pageX, e.pageY, (Math.random() - 0.5), (Math.random() - 0.5), (Math.random() + 1.1) * 3, "white"))
         })
+
+        const handleResize = e => {
+            ctx.canvas.height = window.innerHeight;
+            ctx.canvas.width = window.innerWidth;
+          };
+      
+          handleResize();
+          window.addEventListener("resize", handleResize);
 
         circleArray = [];
         for(let i = 0; i < canvasWidth * 0.2 ; i++){
@@ -33,9 +38,7 @@ export default function Canvas(){
         }
         
         const render = () => {
-            const canvas = canvasRef.current;
-            if(canvas == null) {return}
-            const ctx = canvas.getContext("2d");
+            if(canvasRef.current == null) {return}
             ctx.fillStyle = backgroundColor;
             ctx.fillRect(0,0, canvasWidth, canvasHeight)
 
@@ -64,8 +67,11 @@ export default function Canvas(){
                 line.update(ctx)
             })
             requestAnimationFrame(render);
+            
         };
         render();
+
+        return () => window.removeEventListener("resize", handleResize);
     }, []);
 
     return <canvas id="canvas" ref={canvasRef} 
