@@ -18,27 +18,23 @@ ul {
 .circle {
     width:75px;
     height:75px;
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    border-radius: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: 2px 4px 4px black;
-    transition: 0.3s all linear;
-}
-.circleG {
-    background-image: url(${BackgroundGit});
-}
-.circleL {
-    background-image: url(${BackgroundLinked});
-}
-.circle:hover {
-    background-color: #fff;
-    box-shadow: 4px 8px 8px black;
-    transform: translateY(-4px);
-
+    img {
+        width:100%;
+        box-shadow: 2px 4px 4px black;
+        border-radius: 50%;
+        transition: 0.3s all linear;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display:flex;
+        justify-content:center;
+        align-items: center;
+    }
+    img:hover {
+        box-shadow: 4px 8px 8px black;
+        transform: translateY(-4px);
+        color: #fff;
+    }
 }
 
         @media(min-width:765px){
@@ -56,10 +52,12 @@ const SocialLinks = () => {
         <StyledSocialLinks>
             <ul>
                 <li>
-                    <a  target="_blank" href="https://www.github.com/mtzngn" rel="noreferrer"><div className=" circle circleG"></div></a>
+                    <a  target="_blank" href="https://www.github.com/mtzngn" rel="noreferrer"><div className=" circle circleG">
+                        <img src={BackgroundGit}></img> </div></a>
                 </li>
                 <li>
-                    <a  target="_blank" href="https://www.linkedin.com/in/taha-zengin/" rel="noreferrer"><div className="circle circleL"></div></a>
+                    <a  target="_blank" href="https://www.linkedin.com/in/taha-zengin/" rel="noreferrer"><div className="circle circleL">
+                        <img src={BackgroundLinked}></img> </div></a>
                 </li>
             </ul>
         </StyledSocialLinks>
