@@ -36,6 +36,7 @@ export default function Canvas(){
         
         const render = () => {
             const canvas = canvasRef.current;
+            if(canvas == null) {return}
             const ctx = canvas.getContext("2d");
             ctx.fillStyle = backgroundColor;
             ctx.fillRect(0,0, canvasWidth, canvasHeight)
