@@ -3,23 +3,24 @@ import styled from "styled-components"
 
 const StyledDIv = styled.div`
 background-color: #14213D;
-height:100vh;
 width:100%;
+min-height: 100vh;
 display:flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+padding: 50px 2% 50px 2%;
 
 .wrapper {
     padding: 8px;
     width:80%;
-    height:80%;
     border: 1px solid white;
     display:flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 
+    padding: 50px 10% 50px 10%;
     h2 {
         margin: 10px;
         @media (min-width:768px) {
@@ -36,12 +37,9 @@ align-items: center;
         }
     }
 
-
-
     p {
         color: white;
         font-size: 14px;
-        text-align: center;
         @media (min-width:768px) {
             font-size: 20px;
 

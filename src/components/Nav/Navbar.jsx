@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from "styled-components";
 import Burger from './Burger';
 import Logo from "./Logo"
@@ -19,10 +19,12 @@ z-index: 99;
 
 `
 const Navbar = () => {
+    const [open, setOpen] = useState(false);
+
     return (
         <Nav>
             <Logo />
-            <Burger />
+            <Burger open={open} setOpen={setOpen}/>
 
         </Nav>
     )
