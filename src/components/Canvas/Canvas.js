@@ -11,7 +11,7 @@ export default function Canvas(){
 
     useEffect(()=>{
         const ctx = canvasRef.current.getContext("2d");
-        let canvasHeight = canvasRef.current.clientHeight
+        let canvasHeight = canvasRef.current.clientHeight 
         let canvasWidth = canvasRef.current.clientWidth
 
         document.addEventListener("click", (e)=>{
@@ -29,8 +29,8 @@ export default function Canvas(){
         circleArray = [];
         for(let i = 0; i < canvasWidth * 0.2 ; i++){
             let radius = (Math.random() + 0.2) * 5;
-            let x = Math.random() * canvasWidth;
-            let y = Math.random() * canvasHeight;
+            let x = (Math.random()* (9 - 1) + 1) / 10  * canvasWidth;
+            let y = (Math.random()* (9 - 1) + 1) / 10  * canvasHeight;
             let dx = (Math.random() - 0.5) ;  
             let dy = (Math.random() - 0.5) ;
             let color = "white"

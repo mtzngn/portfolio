@@ -25,10 +25,10 @@ export default function Circle(x, y, dx, dy, radius, color) {
 
     this.update = (ctx) => {
         if (this.x > window.innerWidth - this.radius || this.x - this.radius < 0) {
-            this.dx = -dx;
+            this.dx = -this.dx;
         }
         if (this.y > window.innerHeight - this.radius || this.y - this.radius < 0) {
-            this.dy = -dy;
+            this.dy = -this.dy;
         }
         this.x += this.dx;
         this.y += this.dy;
