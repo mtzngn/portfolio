@@ -9,7 +9,7 @@ import Canvas from "../components/Canvas/Canvas"
 const StyledWelcome = styled.div`
 .canvas-wrapper {
     width:100%;
-    height:100%;
+    height:92vh;
     position: absolute;
     z-index: -1;
     background: transparent;
