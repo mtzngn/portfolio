@@ -10,6 +10,7 @@ import pokemon from '../assets/pokemon.png';
 import spaceInvaders from '../assets/spaceInvaders.png';
 import twitterClone from '../assets/twitterClone.png';
 import whackAMole from '../assets/whackAMole.png';
+import moovfind from '../assets/moovfind.png';
 
 
 const StyledCards = styled.div`
@@ -68,6 +69,9 @@ body {
     margin:50px;
   }
 }
+.card0 {
+    background-image: url(${moovfind});
+}
 .card1 {
     background-image: url(${calculator});
 }
@@ -103,6 +107,12 @@ body {
 const Projects = () => {
     return (
         <StyledCards>
+            <div className="cardWrapper">
+                <a target="_blank" rel="noreferrer" href="https://moo-v-find.netlify.app/">
+                <Card cardClass={"card0"}/>
+                <h2>Moo-v-find with Mern Stack</h2>
+                </a>
+            </div>
             <div className="cardWrapper">
                 <a target="_blank" rel="noreferrer" href="https://simplecalculator92.netlify.app/">
                 <Card cardClass={"card1"}/>
