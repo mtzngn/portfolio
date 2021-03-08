@@ -7,7 +7,8 @@ export default function Circle(x, y, dx, dy, radius, color) {
 
     document.addEventListener("mousemove", (e)=>{
         mouse.x = e.x;
-        mouse.y = e.y;
+        mouse.y = parseInt(e.y) -75;
+        console.log(mouse.y)
     })
     this.x = x;
     this.y = y;
