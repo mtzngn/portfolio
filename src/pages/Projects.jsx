@@ -17,6 +17,7 @@ const StyledCards = styled.div`
 width:100%;
 height: 100vh;
 background-color: #14213D;
+
 .cardWrapper a {
     text-decoration: none;
 }
@@ -105,68 +106,30 @@ body {
 
 `
 const Projects = () => {
+    const cards = [
+        {link : "https://moo-v-find.netlify.app/", class : "card0", title: "Moo-v-find with Mern Stack"},
+        {link : "https://simplecalculator92.netlify.app/", class : "card1", title: "Calculator with React.js"},
+        {link : "https://mtzngn.github.io/canvasConstellation/", class : "card2", title: "Constellations"},
+        {link : "https://mtzngn.github.io/spaceInvaders/", class : "card3", title: "Space Invaders"},
+        {link : "https://mtzngn.github.io/twitter-clone", class : "card4", title: "Twitter Clone"},
+        {link : "https://mtzngn.github.io/topTrumpGame/", class : "card5", title: "Top Trump"},
+        {link : "https://mtzngn.github.io/diceGame2/", class : "card6", title: "Dice Gmae"},
+        {link : "https://mtzngn.github.io/whackAMoleGame/", class : "card7", title: "Whack A Mole"},
+        {link : "https://mtzngn.github.io/drumKit/", class : "card8", title: "Drum Kit"},
+        {link : "https://mtzngn.github.io/keyCodeProject/", class : "card9", title: "Key Code"},
+    ]
     return (
         <StyledCards>
-            <div className="cardWrapper">
-                <a target="_blank" rel="noreferrer" href="https://moo-v-find.netlify.app/">
-                <Card cardClass={"card0"}/>
-                <h2>Moo-v-find with Mern Stack</h2>
-                </a>
-            </div>
-            <div className="cardWrapper">
-                <a target="_blank" rel="noreferrer" href="https://simplecalculator92.netlify.app/">
-                <Card cardClass={"card1"}/>
-                <h2>Calculator with React.js</h2>
-                </a>
-            </div>
-            <div className="cardWrapper">
-            <a target="_blank" rel="noreferrer" href="https://mtzngn.github.io/canvasConstellation/">
-                <Card cardClass={"card2"}/>
-                <h2>Constellations</h2>
-            </a>
-            </div>
-            <div className="cardWrapper">
-            <a target="_blank" rel="noreferrer" href="https://mtzngn.github.io/spaceInvaders/">
-                <Card cardClass={"card3"}/>
-                <h2>Space Invaders </h2>
-            </a>
-            </div>
-            <div className="cardWrapper">
-            <a target="_blank" rel="noreferrer" href="https://mtzngn.github.io/twitter-clone">
-                <Card cardClass={"card4"}/>
-                <h2>Twitter Clone</h2>
-            </a>
-            </div>
-            <div className="cardWrapper">
-            <a target="_blank" rel="noreferrer" href="https://mtzngn.github.io/topTrumpGame/">
-                <Card cardClass={"card5"}/>
-                <h2>Top Trump</h2>
-            </a>
-            </div>
-            <div className="cardWrapper">
-            <a target="_blank" rel="noreferrer" href="https://mtzngn.github.io/diceGame2/">
-                <Card cardClass={"card6"}/>
-                <h2>Dice Game</h2>
-            </a>
-            </div>
-            <div className="cardWrapper">
-            <a target="_blank" rel="noreferrer" href="https://mtzngn.github.io/whackAMoleGame/">
-                <Card cardClass={"card7"}/>
-                <h2>Whack A Mole</h2>
-            </a>
-            </div>
-            <div className="cardWrapper">
-            <a target="_blank" rel="noreferrer" href="https://mtzngn.github.io/drumKit/">
-                <Card cardClass={"card8"}/>
-                <h2>Drum Kit</h2>
-            </a>
-            </div>
-            <div className="cardWrapper">
-            <a target="_blank" rel="noreferrer" href="https://mtzngn.github.io/keyCodeProject/">
-                <Card cardClass={"card9"}/>
-                <h2>Key Code</h2>
-            </a>
-            </div>
+            {cards.map((card,i)=>{
+                return(
+                <div className="cardWrapper" key={(i + 1)*100}>
+                    <a target="_blank" rel="noreferrer" href={card.link} key={(i + 1)*1000}>
+                        <Card cardClass={card.class} key={(i + 1)*10000}/>
+                        <h2 key={(i + 1)*100000}>{card.title}</h2>
+                    </a>
+                </div>
+                )
+            })}
         </StyledCards>
     )
 }
