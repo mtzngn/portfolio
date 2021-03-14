@@ -53,11 +53,11 @@ const SocialLinks = () => {
             <ul>
                 <li>
                     <a  target="_blank" href="https://www.github.com/mtzngn" rel="noreferrer"><div className=" circle circleG">
-                        <img src={BackgroundGit}></img> </div></a>
+                        <img src={BackgroundGit} alt="logoForGit"></img> </div></a>
                 </li>
                 <li>
                     <a  target="_blank" href="https://www.linkedin.com/in/taha-zengin/" rel="noreferrer"><div className="circle circleL">
-                        <img src={BackgroundLinked}></img> </div></a>
+                        <img src={BackgroundLinked} alt="logoForLinkedin"></img> </div></a>
                 </li>
             </ul>
         </StyledSocialLinks>

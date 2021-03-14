@@ -15,7 +15,7 @@ import moovfind from '../assets/moovfind.png';
 
 const StyledCards = styled.div`
 width:100%;
-height: 100%;
+height: 100vh;
 background-color: #14213D;
 .cardWrapper a {
     text-decoration: none;
