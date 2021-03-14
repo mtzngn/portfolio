@@ -95,7 +95,7 @@ const Contact = () => {
             <h2 style={{color: "white"}}>CONTACT ME!</h2>
             <h3 style={{color: "white"}}>I'm available for freelance work.</h3>
             <h3 style={{color: "white"}}>Drop me a line if you fancy a chat.</h3>
-                <a href="">mt.zngn@gmail.com</a>
+                <a href="mailto:mt.zngn@gmail.com">mt.zngn@gmail.com</a>
             </div>
         </StyledDIv>
     )

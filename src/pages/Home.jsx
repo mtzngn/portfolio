@@ -10,11 +10,11 @@ const StyledWelcome = styled.div`
 .canvas-wrapper {
     width:100%;
     height:92vh;
-    position: absolute;
+    position: fixed;
+	top: 8vh;
     z-index: -1;
     background: transparent;
 }
-position: relative;
 
 width:100%;
 height: 92vh;
