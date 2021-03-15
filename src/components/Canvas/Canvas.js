@@ -49,7 +49,7 @@ export default function Canvas(){
             lineArray = []
             circleArray.forEach((circle, index)=>{
                 circleArray.forEach((circle2, index2)=>{
-                    if (index != index2 ) {
+                    if (index !== index2 ) {
                         var dist = Math.hypot(circle.x - circle2.x, circle.y - circle2.y)
                         let a;
                         if (dist < 140) {
