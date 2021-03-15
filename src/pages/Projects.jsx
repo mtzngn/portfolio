@@ -59,12 +59,6 @@ const StyledCards = styled.div`
         align-items: center;
         justify-content: center;
         color: #fff;
-        h3{
-
-        }
-        p{
-
-        }
         a{
             text-decoration:none;
             margin-top: 20%;
