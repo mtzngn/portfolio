@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const StyledDIv = styled.div`
 background-color: #14213D;
-height:100vh;
+height:92vh;
 width:100%;
 display:flex;
 flex-direction: column;
@@ -18,13 +18,13 @@ align-items: center;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 50%;
+    margin-top: 35%;
     @media (min-width:1024px) {
         margin-top: 30%;
 
         }
         @media (min-width:1440px) {
-            margin-top: 20%;
+            margin-top: 15%;
 
         }
 

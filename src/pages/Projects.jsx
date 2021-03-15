@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from "styled-components";
-import Card from "../components/Card"
 import calculator from '../assets/calculator.png';
 import constellation from '../assets/constellation.png';
 import diceGame from '../assets/diceGame.png';
@@ -14,122 +13,158 @@ import moovfind from '../assets/moovfind.png';
 
 
 const StyledCards = styled.div`
-width:100%;
-height: 100vh;
-background-color: #14213D;
-
-.cardWrapper a {
-    text-decoration: none;
-}
-h2 {
-    color: #fff;
-    margin-top: 20px;
-    text-align:center;
-}
-body {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  cursor: default;
-}
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  overflow: hidden;
-  @media (min-width: 1024px){
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
+    width:100%;
+    height: 92vh;
+    background-color: #14213D;
+    overflow-y:auto;
 .card {
-  margin-top:50px;
-  width: 20rem;
-  height: 20rem;
-  background: grey;
-  border-radius: 5px;
-  background-size: cover;
-  background-position: center ;
-  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
-  transition: box-shadow 0.5s;
-  will-change: transform;
-  border: 15px solid white;
-  @media (min-width: 1024px){
-    width:100%;
-    width: 15rem;
-    height: 15rem;
-    margin:50px;
-  }
-  @media (min-width: 1440px){
-    width:100%;
-    width: 20rem;
+    width: 100%;
     height: 20rem;
-    margin:50px;
-  }
+    position: relative;
+    transition: all .5s ease-in;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
 }
-.card0 {
-    background-image: url(${moovfind});
+ 
+.card-image {
+    height: 200px;
+    width: 200px;
+    border-radius: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-.card1 {
-    background-image: url(${calculator});
+.card-overlay {
+    position: absolute;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 200px;
+    width: 200px;
+    opacity: 0;
+    visibility: none;
+    transition: .5s ease;
+    background-color: rgba(20,33,61,0.9);
+    .overlay-text {
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        h3{
+
+        }
+        p{
+
+        }
+        a{
+            text-decoration:none;
+            margin-top: 20%;
+            padding: 6%;
+            color: #fff;
+            border: 1px solid #fff;
+        }
+        a:hover{
+            text-decoration:none;
+            margin-top: 20%;
+            padding: 6%;
+            color: #000;
+            border: 1px solid #000;
+            background-color: #fff;
+        }
+    }
 }
-.card2 {
-    background-image: url(${constellation});
+.card:hover .card-overlay {
+    opacity: 1;
 }
-.card3 {
-    background-image: url(${spaceInvaders});
+@media(min-width: 768px){
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    height:fit-content;
+    .card{
+        width: 50%;
+    }
 }
-.card4 {
-    background-image: url(${twitterClone});
+@media(min-width: 1024px){
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    height:92vh;
+    .card{
+        width: 33%;
+    }
 }
-.card5 {
-    background-image: url(${pokemon});
+@media(min-width: 1440px){
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    height:92vh;
+    .card{
+        width: 33%;
+        margin-top:4%;
+    }
+    .card-image, .card-overlay {
+    height: 300px;
+    width: 300px;
+
 }
-.card6 {
-    background-image: url(${diceGame});
 }
-.card7 {
-    background-image: url(${whackAMole});
+@media(min-width: 2560px){
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    height:92vh;
+    .card{
+        width: 33%;
+        margin-top:4%;
+    }
+    .card-image, .card-overlay {
+    height: 70%;
+    width: 50%;
+
 }
-.card8 {
-    background-image: url(${drumKit});
-}
-.card9 {
-    background-image: url(${keyCodeProject});
-}
-.card:hover {
-  box-shadow: 0px 30px 100px -10px rgba(88, 44, 44, 0.4);
 }
 
 `
 const Projects = () => {
     const cards = [
-        {link : "https://moo-v-find.netlify.app/", class : "card0", title: "Moo-v-find with Mern Stack"},
-        {link : "https://simplecalculator92.netlify.app/", class : "card1", title: "Calculator with React.js"},
-        {link : "https://mtzngn.github.io/canvasConstellation/", class : "card2", title: "Constellations"},
-        {link : "https://mtzngn.github.io/spaceInvaders/", class : "card3", title: "Space Invaders"},
-        {link : "https://mtzngn.github.io/twitter-clone", class : "card4", title: "Twitter Clone"},
-        {link : "https://mtzngn.github.io/topTrumpGame/", class : "card5", title: "Top Trump"},
-        {link : "https://mtzngn.github.io/diceGame2/", class : "card6", title: "Dice Gmae"},
-        {link : "https://mtzngn.github.io/whackAMoleGame/", class : "card7", title: "Whack A Mole"},
-        {link : "https://mtzngn.github.io/drumKit/", class : "card8", title: "Drum Kit"},
-        {link : "https://mtzngn.github.io/keyCodeProject/", class : "card9", title: "Key Code"},
+        {link : "https://moo-v-find.netlify.app/", class : "card card0", title: "Moo-v-find", image: `${moovfind}`, exp:"Full Stack App with MERN"},
+        {link : "https://simplecalculator92.netlify.app/", class : "card card1", title: "Calculator", image: `${calculator}`, exp:"Build with React.js"},
+        {link : "https://mtzngn.github.io/canvasConstellation/", class : "card card2", title: "Constellations", image: `${constellation}`, exp:"Made with Vanilla JS"},
+        {link : "https://mtzngn.github.io/spaceInvaders/", class : "card card3", title: "Space Invaders", image: `${spaceInvaders}`, exp:"Made with Vanilla JS"},
+        {link : "https://mtzngn.github.io/twitter-clone", class : "card card4", title: "Twitter Clone", image: `${twitterClone}`, exp:"Build with React.js"},
+        {link : "https://mtzngn.github.io/topTrumpGame/", class : "card card5", title: "Top Trump", image: `${pokemon}`, exp:"JS DOM Manipulation"},
+        {link : "https://mtzngn.github.io/diceGame2/", class : "card card6", title: "Dice Gmae", image: `${diceGame}`, exp:"JS DOM Manipulation"},
+        {link : "https://mtzngn.github.io/whackAMoleGame/", class : "card card7", title: "Whack A Mole", image: `${whackAMole}`, exp:"JS DOM Manipulation"},
+        {link : "https://mtzngn.github.io/drumKit/", class : "card card8", title: "Drum Kit", image: `${drumKit}`, exp:"JS DOM Manipulation"},
+        {link : "https://mtzngn.github.io/keyCodeProject/", class : "card card9", title: "Key Code", image: `${keyCodeProject}`, exp:"JS DOM Manipulation"},
     ]
     return (
         <StyledCards>
-            {cards.map((card,i)=>{
+            {cards.map((card, i)=>{
                 return(
-                <div className="cardWrapper" key={(i + 1)*100}>
-                    <a target="_blank" rel="noreferrer" href={card.link} key={(i + 1)*1000}>
-                        <Card cardClass={card.class} key={(i + 1)*10000}/>
-                        <h2 key={(i + 1)*100000}>{card.title}</h2>
-                    </a>
+                <div className="card" key={(i +1)*350}>
+                    <img src={card.image} className="card-image" key={(i +1)*50} alt={cards.title}></img>
+                    <div className="card-overlay" key={(i +1)*250}>
+                        <div className="overlay-text" key={(i +1)*300}>
+                            <h3 key={(i +1)*100}>{card.title} </h3>
+                            <p key={(i +1)*150}>{card.exp}</p>
+                            <a href={card.link} className="button" key={(i +1)*200}>Open Project</a>
+                        </div>
+                    </div>
                 </div>
                 )
             })}
+
         </StyledCards>
     )
 }
