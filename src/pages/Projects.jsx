@@ -10,6 +10,7 @@ import spaceInvaders from '../assets/spaceInvaders.png';
 import twitterClone from '../assets/twitterClone.png';
 import whackAMole from '../assets/whackAMole.png';
 import moovfind from '../assets/moovfind.png';
+import todo from '../assets/2do.png' ;
 
 
 const StyledCards = styled.div`
@@ -131,16 +132,17 @@ const StyledCards = styled.div`
 `
 const Projects = () => {
     const cards = [
-        {link : "https://moo-v-find.netlify.app/", class : "card card0", title: "Moo-v-find", image: `${moovfind}`, exp:"Full Stack App with MERN"},
-        {link : "https://simplecalculator92.netlify.app/", class : "card card1", title: "Calculator", image: `${calculator}`, exp:"Build with React.js"},
-        {link : "https://mtzngn.github.io/canvasConstellation/", class : "card card2", title: "Constellations", image: `${constellation}`, exp:"Made with Vanilla JS"},
-        {link : "https://mtzngn.github.io/spaceInvaders/", class : "card card3", title: "Space Invaders", image: `${spaceInvaders}`, exp:"Made with Vanilla JS"},
-        {link : "https://mtzngn.github.io/twitter-clone", class : "card card4", title: "Twitter Clone", image: `${twitterClone}`, exp:"Build with React.js"},
-        {link : "https://mtzngn.github.io/topTrumpGame/", class : "card card5", title: "Top Trump", image: `${pokemon}`, exp:"JS DOM Manipulation"},
-        {link : "https://mtzngn.github.io/diceGame2/", class : "card card6", title: "Dice Gmae", image: `${diceGame}`, exp:"JS DOM Manipulation"},
-        {link : "https://mtzngn.github.io/whackAMoleGame/", class : "card card7", title: "Whack A Mole", image: `${whackAMole}`, exp:"JS DOM Manipulation"},
-        {link : "https://mtzngn.github.io/drumKit/", class : "card card8", title: "Drum Kit", image: `${drumKit}`, exp:"JS DOM Manipulation"},
-        {link : "https://mtzngn.github.io/keyCodeProject/", class : "card card9", title: "Key Code", image: `${keyCodeProject}`, exp:"JS DOM Manipulation"},
+        {link : "https://moo-v-find.netlify.app/", class : "card ", title: "Moo-v-find", image: `${moovfind}`, exp:"Full Stack App with MERN"},
+        {link : "https://simplecalculator92.netlify.app/", class : "card ", title: "Calculator", image: `${calculator}`, exp:"Build with React.js"},
+        {link : "https://mtzngn.github.io/canvasConstellation/", class : "card ", title: "Constellations", image: `${constellation}`, exp:"Made with Vanilla JS"},
+        {link : "https://mtzngn.github.io/spaceInvaders/", class : "card ", title: "Space Invaders", image: `${spaceInvaders}`, exp:"Made with Vanilla JS"},
+        {link : "https://mtzngn.github.io/2do/", class : "card ", title: "2do App", image: `${todo}`, exp:"React.js & styled-componenets"},
+        {link : "https://mtzngn.github.io/twitter-clone", class : "card ", title: "Twitter Clone", image: `${twitterClone}`, exp:"Build with React.js"},
+        {link : "https://mtzngn.github.io/topTrumpGame/", class : "card ", title: "Top Trump", image: `${pokemon}`, exp:"JS DOM Manipulation"},
+        {link : "https://mtzngn.github.io/diceGame2/", class : "card ", title: "Dice Game", image: `${diceGame}`, exp:"JS DOM Manipulation"},
+        {link : "https://mtzngn.github.io/whackAMoleGame/", class : "card ", title: "Whack A Mole", image: `${whackAMole}`, exp:"JS DOM Manipulation"},
+        {link : "https://mtzngn.github.io/drumKit/", class : "card ", title: "Drum Kit", image: `${drumKit}`, exp:"JS DOM Manipulation"},
+        {link : "https://mtzngn.github.io/keyCodeProject/", class : "card ", title: "Key Code", image: `${keyCodeProject}`, exp:"JS DOM Manipulation"},
     ]
     return (
         <StyledCards>
