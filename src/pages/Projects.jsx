@@ -28,6 +28,9 @@ const StyledCards = styled.div`
     align-items: center;
     justify-content: center;
 }
+.card:hover{
+    transform: translateY(-5px);
+}
  
 .card-image {
     height: 200px;
@@ -36,7 +39,14 @@ const StyledCards = styled.div`
     display: block;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 2px 2px 30px 8px rgba(0,0,0,0.5);
 }
+.card-overlay:hover{
+    box-shadow: 2px 2px 30px 8px rgba(255,255,255,0.4);
+
+}
+
+
 .card-overlay {
     position: absolute;
     display:flex;
@@ -74,6 +84,10 @@ const StyledCards = styled.div`
             color: #000;
             border: 1px solid #000;
             background-color: #fff;
+        }
+        p{
+            text-align:center;
+            margin-top: 10px;
         }
     }
 }
@@ -132,7 +146,7 @@ const StyledCards = styled.div`
 `
 const Projects = () => {
     const cards = [
-        {link : "https://moo-v-find.netlify.app/", class : "card ", title: "Moo-v-find", image: `${moovfind}`, exp:"Full Stack App with MERN"},
+        {link : "https://moo-v-find.netlify.app/", class : "card ", title: "Moo-v-find", image: `${moovfind}`, exp:"Full Stack App with user authentication, claud based database. Front-end hosted at Netlify and Back-end in Heroku. Build with MERN Stack."},
         {link : "https://simplecalculator92.netlify.app/", class : "card ", title: "Calculator", image: `${calculator}`, exp:"Build with React.js"},
         {link : "https://mtzngn.github.io/canvasConstellation/", class : "card ", title: "Constellations", image: `${constellation}`, exp:"Made with Vanilla JS"},
         {link : "https://mtzngn.github.io/spaceInvaders/", class : "card ", title: "Space Invaders", image: `${spaceInvaders}`, exp:"Made with Vanilla JS"},
