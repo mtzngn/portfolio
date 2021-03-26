@@ -11,6 +11,7 @@ import twitterClone from '../assets/twitterClone.png';
 import whackAMole from '../assets/whackAMole.png';
 import moovfind from '../assets/moovfind.png';
 import todo from '../assets/2do.png' ;
+import sortAlgoVisualizer from '../assets/sortAlgoVisualizer.png' ;
 
 
 const StyledCards = styled.div`
@@ -146,14 +147,15 @@ const StyledCards = styled.div`
 `
 const Projects = () => {
     const cards = [
+        {link : "https://mtzngn.github.io/sorting-algorithms-visualizer/", class : "card ", title: "Algorithm Visualizer", image: `${sortAlgoVisualizer}`, exp:"Tool for visualizing sorting algorithms. Build with React.js"},
         {link : "https://moo-v-find.netlify.app/", class : "card ", title: "Moo-v-find", image: `${moovfind}`, exp:"Full Stack App with user authentication, claud based database. Front-end hosted at Netlify and Back-end in Heroku. Build with MERN Stack."},
         {link : "https://simplecalculator92.netlify.app/", class : "card ", title: "Calculator", image: `${calculator}`, exp:"Build with React.js"},
         {link : "https://mtzngn.github.io/canvasConstellation/", class : "card ", title: "Constellations", image: `${constellation}`, exp:"Made with Vanilla JS"},
         {link : "https://mtzngn.github.io/spaceInvaders/", class : "card ", title: "Space Invaders", image: `${spaceInvaders}`, exp:"Made with Vanilla JS"},
         {link : "https://mtzngn.github.io/2do/", class : "card ", title: "2do App", image: `${todo}`, exp:"React.js & styled-componenets"},
-        {link : "https://mtzngn.github.io/twitter-clone", class : "card ", title: "Twitter Clone", image: `${twitterClone}`, exp:"Build with React.js"},
-        {link : "https://mtzngn.github.io/topTrumpGame/", class : "card ", title: "Top Trump", image: `${pokemon}`, exp:"JS DOM Manipulation"},
-        {link : "https://mtzngn.github.io/diceGame2/", class : "card ", title: "Dice Game", image: `${diceGame}`, exp:"JS DOM Manipulation"},
+        // {link : "https://mtzngn.github.io/twitter-clone", class : "card ", title: "Twitter Clone", image: `${twitterClone}`, exp:"Build with React.js"},
+        // {link : "https://mtzngn.github.io/topTrumpGame/", class : "card ", title: "Top Trump", image: `${pokemon}`, exp:"JS DOM Manipulation"},
+        // {link : "https://mtzngn.github.io/diceGame2/", class : "card ", title: "Dice Game", image: `${diceGame}`, exp:"JS DOM Manipulation"},
         {link : "https://mtzngn.github.io/whackAMoleGame/", class : "card ", title: "Whack A Mole", image: `${whackAMole}`, exp:"JS DOM Manipulation"},
         {link : "https://mtzngn.github.io/drumKit/", class : "card ", title: "Drum Kit", image: `${drumKit}`, exp:"JS DOM Manipulation"},
         {link : "https://mtzngn.github.io/keyCodeProject/", class : "card ", title: "Key Code", image: `${keyCodeProject}`, exp:"JS DOM Manipulation"},
